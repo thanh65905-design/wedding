@@ -1,10 +1,9 @@
-# Website Thiệp Cưới - Nguyễn Tiến & Ngọc Lan
+# Website Thiệp Cưới - Kim Oanh & Đình Thành
 
 Website thiệp mời cưới được thiết kế đẹp mắt với các hiệu ứng animation và tương tác.
 
 ## 🌐 Triển khai
 
-Website được triển khai tại: **https://thiepcuoitienlan.id.vn/**
 
 ## 📁 Cấu trúc dự án
 
