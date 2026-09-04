@@ -40,10 +40,10 @@ wedding/
 
 ## 📅 Thông tin sự kiện
 
-- **Ngày:** Thứ Ba, 29.04.2025 (Tức Ngày 2 Tháng 4 Năm Ất Tỵ)
+- **Ngày:** Chủ Nhật, 20.09.2026 (Tức Ngày 10 Tháng 8 Năm Bính Ngọ)
 - **Giờ:** 11h00
-- **Địa điểm:** GIA ĐÌNH NHÀ TRAI - Thôn 12 - Xã Quỳnh Vinh - Thị xã Hoàng Mai - Tỉnh Nghệ An
+- **Địa điểm:** GIA ĐÌNH NHÀ TRAI - tdp Cựu Tự - Phường Đào Viên - Tỉnh Bắc Ninh
 
 ## 👤 Tác giả
 
-Website by Nguyen Van Hoang
+Website by Nguyen Dinh Thanh
