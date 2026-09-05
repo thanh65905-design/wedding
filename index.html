@@ -115,24 +115,43 @@
         </div>
     </div>
 
-    <!-- Confirm -->
+   <!-- Confirm section với 2 nút quà mừng -->
     <div class="cf_container nhay-shadow">
         <div class="cf_desc1">Lễ Thành Hôn</div>
         <div class="cf_desc2">Chủ Nhật | 11h00</div>
         <div class="cf_desc3">20.09.2026</div>
         <div class="cf_desc4">(Tức Ngày 10 Tháng 9 Năm Bính Ngọ)</div>
         
-        <button class="cf_btn js_qr font_tnr">
-            Gửi quà mừng chú rể & cô dâu
-        </button>
+        <!-- Khối chứa 2 nút nằm cạnh nhau -->
+        <div class="btn_group">
+            <button class="cf_btn js_qr_chure font_tnr">
+                Gửi quà mừng chú rể
+            </button>
+            <button class="cf_btn js_qr_codau font_tnr">
+                Gửi quà mừng cô dâu
+            </button>
+        </div>
     </div>    
 
-    <!-- Pop-up Quà mừng -->
-    <div class="popup">
+    <!-- Pop-up Quà mừng Chú rể -->
+    <div class="popup popup_chure">
         <div class="popup_container hide-horizontal-scrollbar">
             <div class="popup_item popup_item1">
+                <p class="popup_title font_thanh_dam">Quà mừng Chú Rể</p>
                 <img src="./source/QRbean.jpg" alt="Mã QR Chú rể">
-                <div class="copy copy_anh" data-copy="100005377497">Sao chép STK</div>
+                <div class="copy copy_anh" data-copy="100005377497">Sao chép STK Chú Rể</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up Quà mừng Cô dâu -->
+    <div class="popup popup_codau">
+        <div class="popup_container hide-horizontal-scrollbar">
+            <div class="popup_item popup_item2">
+                <p class="popup_title font_thanh_dam">Quà mừng Cô Dâu</p>
+                <!-- Đổi lại đường dẫn ảnh QR cô dâu và STK tương ứng bên dưới -->
+                <img src="./source/QRbean_codau.jpg" alt="Mã QR Cô dâu">
+                <div class="copy copy_anh" data-copy="0987654321">Sao chép STK Cô Dâu</div>
             </div>
         </div>
     </div>
@@ -140,6 +159,74 @@
     <!-- Toast thông báo đã copy -->
     <div id="copy-toast">Đã copy!</div>
 
+    <!-- Đoạn JavaScript xử lý bật/tắt độc lập cho cả 2 pop-up -->
+    <script>
+        // Lấy các phần tử Pop-up Chú rể
+        const btnQrChure = document.querySelector('.js_qr_chure');
+        const popupChure = document.querySelector('.popup_chure');
+        const popupItem1 = document.querySelector('.popup_item1');
+
+        // Lấy các phần tử Pop-up Cô dâu
+        const btnQrCodau = document.querySelector('.js_qr_codau');
+        const popupCodau = document.querySelector('.popup_codau');
+        const popupItem2 = document.querySelector('.popup_item2');
+
+        // Bật/tắt Pop-up Chú rể
+        if (btnQrChure && popupChure) {
+            btnQrChure.addEventListener('click', () => popupChure.classList.add('show'));
+            popupChure.addEventListener('click', () => popupChure.classList.remove('show'));
+        }
+        if (popupItem1) {
+            popupItem1.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Bật/tắt Pop-up Cô dâu
+        if (btnQrCodau && popupCodau) {
+            btnQrCodau.addEventListener('click', () => popupCodau.classList.add('show'));
+            popupCodau.addEventListener('click', () => popupCodau.classList.remove('show'));
+        }
+        if (popupItem2) {
+            popupItem2.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Hiệu ứng Zoom Pop-up
+        const popupItems = document.querySelectorAll('.popup_item');
+        if (popupItems.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const ratio = entry.intersectionRatio;
+                    const value = 0.8 + 0.2 * ratio;
+                    entry.target.style.opacity = value.toFixed(2);
+                    entry.target.style.transform = `scale(${value.toFixed(2)})`;
+                });
+            }, {
+                root: document.querySelector('.popup_container'),
+                threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+            });
+
+            popupItems.forEach(item => observer.observe(item));
+        }
+
+        // Chức năng sao chép STK
+        function showToast() {
+            const toast = document.getElementById('copy-toast');
+            if (toast) {
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 1000);
+            }
+        }
+
+        document.querySelectorAll('.copy').forEach(copyBtn => {
+            copyBtn.addEventListener('click', function () {
+                const text = this.dataset.copy;
+                if (navigator.clipboard && text) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast();
+                    }).catch(err => console.error('Copy failed: ', err));
+                }
+            });
+        });
+    </script>
     <!-- Album -->
     <div class="album_header">
         <span>Album ảnh cưới</span>
