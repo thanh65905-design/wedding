@@ -654,3 +654,30 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
     display: block !important;
 }
+/* Tăng kích thước và làm rõ nét mã QR cho bố trí 2 cột */
+.thiep_add .qr_img_large {
+    width: 130px !important;            /* Tăng kích thước QR to hơn */
+    height: 130px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;      /* Giữ nguyên tỉ lệ ảnh không bị móp */
+    
+    /* Thuật toán làm nét pixel giúp QR rõ hơn, dễ quét hơn */
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    image-rendering: pixelated !important;
+    
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    background-color: #ffffff !important; /* Lót nền trắng giúp mắt đọc QR quét nhạy hơn */
+    padding: 3px !important;             /* Tạo viền trắng nhỏ xung quanh mã QR */
+    display: block !important;
+}
+
+/* Đảm bảo khung chứa QR có không gian rộng đủ chứa ảnh to */
+.thiep_add .location_qr {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 4px 0 !important;
+}
