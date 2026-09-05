@@ -1,47 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Kim Oanh & Đình Thành</title>
+    <title>Wedding Kim Oanh & Đình Thành</title>
     <link rel="stylesheet" href="./style.css?v=19.9">
     <link rel="stylesheet" href="./style2.css?v=19.9">
-    <script src="js.js?v=19.9"></script>
+    <script src="js.js?v=19.9" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:opsz,wght@6..72,500&family=Noto+Serif+Display&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Lễ Thành Hôn Kim Oanh & Đình Thành"/>
+    <meta property="og:title" content="Lễ Thành Hôn Kim Oanh & Đình Thành"/>
     <meta property="og:description" content="Thiệp mời dự Lễ Thành Hôn"/>
-    <!meta property="og:image" content="https://thiepcuoitienlan.id.vn/source/dau.jpg" />
-    <!meta property="og:type" content="website" />
-    <!meta property="og:url" content="https://thiepcuoitienlan.id.vn" />
+    <!-- <meta property="og:image" content="https://thiepcuoitienlan.id.vn/source/dau.jpg" /> -->
+    <!-- <meta property="og:type" content="website" /> -->
+    <!-- <meta property="og:url" content="https://thiepcuoitienlan.id.vn" /> -->
     <link rel="icon" href="source/favicon.png" type="image/png">
-
 
     <link rel="preload" as="image" href="./source/dau.jpg" />
     <link rel="preload" as="audio" href="./source/music.mp3" type="audio/mpeg" />
     <link rel="preload" as="image" href="./source/tanthoi.jpg" />
     <link rel="preload" as="image" href="./source/ok4.jpg" />
-
-
 </head>
 
+<body>   
+    <audio id="myAudio">
+        <source src="./source/music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
 
-<audio id="myAudio" autoplay>
-    <source src="./source/music.mp3" type="audio/mpeg">
-    Trình duyệt của bạn không hỗ trợ audio.
-</audio>
-
-
-
-<body>      
     <div id="audioIndicator">
-        <img src="./source/volume.svg" alt="">
-        
+        <img src="./source/volume.svg" alt="Âm thanh">
     </div>
-    <!-- thiệp -->
+
+    <!-- Thiệp -->
     <div class="thiep">
         <div class="thiep_blur-bg">
             <div class="thiep_container">
@@ -51,7 +45,7 @@
                 </div>
                 <!-- Phần 1 -->
                 <div class="thiep_name">
-                    <p class="font_thanh_dam">Đình Thành</p>
+                    <p class="font_thanh_dam">Đình Thành</p>
                     <p class="font_thanh_dam thiep_small">&</p>
                     <p class="font_thanh_dam">Kim Oanh</p>
                 </div>
@@ -62,7 +56,7 @@
                     <div class="thiep_date_row">
                       <div class="thiep_item">
                         <hr>
-                        <span class="padding_day">Chủ Nhật</span>
+                        <span class="padding_day">Chủ Nhật</span>
                         <hr>
                       </div>
                       <div class="thiep_main_date">20</div>
@@ -73,224 +67,201 @@
                       </div>
                     </div>
                     <div class="thiep_month_year">09.2026</div>
-                  </div>
+                </div>
                   
                 <!-- Phần 3 -->
                 <div class="thiep_add">
                     <p class="font_fancy add_fancy">Địa điểm tổ chức</p>
                     <p class="font_thanh_dam add_big">GIA ĐÌNH NHÀ TRAI</p>
-                    <p class="font_thanh_dam add_small">tdp Cựu Tự</p>
-                    <p class="font_thanh_dam add_small">Phường Đào Viên - Tỉnh Bắc Ninh </p>
+                    <p class="font_thanh_dam add_small">TDP Cựu Tự</p>
+                    <p class="font_thanh_dam add_small">Phường Đào Viên - Tỉnh Bắc Ninh</p>
                     <hr class="hr-add">
                 </div>
 
-                <!-- phần icon -->
+                <!-- Phần icon -->
                 <div class="thiep_all_icon">
-                    <a class="thiep_map" href="https://maps.app.goo.gl/XVC4NoV6cjeSWxHh7">
-                        <img src="./source/pin_map.svg" alt="">
+                    <a class="thiep_map" href="https://maps.app.goo.gl/XVC4NoV6cjeSWxHh7" target="_blank" rel="noopener noreferrer">
+                        <img src="./source/pin_map.svg" alt="Bản đồ">
                     </a>
                 </div>
-                    
-                
             </div>
-
         </div>
-    
     </div>
 
+    <!-- Giới thiệu -->
     <div class="gt_container">
-        <div class="gt_des font_montserrat"> Giới thiệu </div>
-        <div class="gt_des2 font_thanh_dam"> Chú Rể và Cô Dâu </div>
+        <div class="gt_des font_montserrat">Giới thiệu</div>
+        <div class="gt_des2 font_thanh_dam">Chú Rể và Cô Dâu</div>
         <div class="gt_img">
-            <img src="./source/thanh.jpg" alt="">
-            <!-- <p class="caption font_thanh_dam">Đình Thành</p> -->
+            <img src="./source/thanh.jpg" alt="Chú rể Đình Thành">
         </div>
         <div class="gt_img">
-            <img src="./source/oanh..jpg" alt="">
-            <!-- <p class="caption font_thanh_dam">Kim Oanh</p> -->
+            <img src="./source/oanh..jpg" alt="Cô dâu Kim Oanh">
         </div>
-
     </div>
-
 
     <!-- Mời -->
     <div class="moi_container">
         <div class="moi_desc1 font_fancy">Thư mời</div>
-        <div class="moi_desc2 font_tnr">Tham dự Lễ cưới của Đình Thành & Kim Oanh</div>
+        <div class="moi_desc2 font_tnr">Tham dự Lễ cưới của Đình Thành & Kim Oanh</div>
         <div class="moi_img">
-            <img class="img_small js_l js_left" src="./source/ok4.jpg" alt="">
-            <img class="img_big js_center" src="./source/tanthoi.jpg" alt="">
-            <img class="img_small js_r js_right" src="./source/ok6.jpg" alt="">            
+            <img class="img_small js_l js_left" src="./source/ok4.jpg" alt="Ảnh cưới">
+            <img class="img_big js_center" src="./source/tanthoi.jpg" alt="Ảnh cưới">
+            <img class="img_small js_r js_right" src="./source/ok6.jpg" alt="Ảnh cưới">            
         </div>
 
-        <div class="moi_desc3 font_tnr">   Tình yêu là nguồn sáng soi rọi mọi khoảnh khắc, 
-            Và những khoảnh khắc ấy đã trở thành vĩnh cửu khi chúng tôi quyết định dành 
-            trọn quãng đời còn lại bên nhau. Chúng tôi, bằng cả tấm lòng, xin chân thành 
-            mời bạn đến chung vui trong ngày lễ trọng đại này. Sự hiện diện của bạn sẽ  
-            làm cho ngày vui của chúng tôi càng thêm phần ý nghĩa!</div>
+        <div class="moi_desc3 font_tnr">
+            Tình yêu là nguồn sáng soi rọi mọi khoảnh khắc, và những khoảnh khắc ấy đã trở thành vĩnh cửu khi chúng tôi quyết định dành trọn quãng đời còn lại bên nhau. Chúng tôi, bằng cả tấm lòng, xin chân thành mời bạn đến chung vui trong ngày lễ trọng đại này. Sự hiện diện của bạn sẽ làm cho ngày vui của chúng tôi càng thêm phần ý nghĩa!
+        </div>
     </div>
 
-    <!-- confirm -->
+    <!-- Confirm -->
     <div class="cf_container nhay-shadow">
         <div class="cf_desc1">Lễ Thành Hôn</div>
-        <div class="cf_desc2">Chủ Nhật | 11h00</div>
+        <div class="cf_desc2">Chủ Nhật | 11h00</div>
         <div class="cf_desc3">20.09.2026</div>
-        <div class="cf_desc4">(Tức Ngày 10 Tháng 9 Năm Bính Ngọ)</div>
-        <button class="cf_btn font_tnr">
-            Gửi quà mừng cô dâu
-        </button>
-        </div>    
-    <!-- pop-up -->
-    <div class="popup">
-        <div class="popup_container hide-horizontal-scrollbar">
-            <div class="popup_item popup_item1">
-                <img src="./source/QRbean.jpg" alt="">
-                <div class="copy copy_anh" data-copy="100005377497"></div>
-        </div>
-    </div>
+        <div class="cf_desc4">(Tức Ngày 10 Tháng 9 Năm Bính Ngọ)</div>
+        
         <button class="cf_btn js_qr font_tnr">
-            Gửi quà mừng chú rể
+            Gửi quà mừng chú rể & cô dâu
         </button>
-    </div>
-    
-    <!-- pop-up -->
+    </div>    
+
+    <!-- Pop-up Quà mừng -->
     <div class="popup">
         <div class="popup_container hide-horizontal-scrollbar">
             <div class="popup_item popup_item1">
-                <img src="./source/QRbean.jpg" alt="">
-                <div class="copy copy_anh" data-copy="100005377497"></div>
+                <img src="./source/QRbean.jpg" alt="Mã QR Chú rể">
+                <div class="copy copy_anh" data-copy="100005377497">Sao chép STK</div>
             </div>
         </div>
     </div>
-    <!-- album -->
+
+    <!-- Toast thông báo đã copy -->
     <div id="copy-toast">Đã copy!</div>
 
+    <!-- Album -->
     <div class="album_header">
         <span>Album ảnh cưới</span>
         <div class="line"></div>
     </div>
     <div class="album_container">
-        <img class="js_album album_left" src="./source/tanthoi.jpg" alt="">
-        <img class="js_album album_left" src="./source/ok1.jpg" alt="">
-        <img class="js_album album_left" src="./source/ok2.jpg" alt="">
-        <img class="js_album album_left" src="./source/ok3.jpg" alt="">
-        <img class="js_album album_left" src="./source/ok4.jpg" alt="">
-        <img class="js_album album_left" src="./source/ok5.jpg" alt="">
-        <img class="js_album album_left" src="./source/codau.jpg" alt="">
-        <img class="js_album album_right" src="./source/ok6.jpg" alt="">
-        <img class="js_album album_right" src="./source/tamdao2.jpg" alt="">
-        <img class="js_album album_right" src="./source/tamdao3.jpg" alt=""> 
-        <img class="js_album album_right" src="./source/tamdao8.jpg" alt="">
-        <img class="js_album album_right" src="./source/tamdao11.jpg" alt="">
-        <img class="js_album album_right" src="./source/tamdao14.jpg" alt="">
-        <img class="js_album album_right" src="./source/chure.jpg" alt="">
-        
+        <img class="js_album album_left" src="./source/tanthoi.jpg" alt="Ảnh cưới 1">
+        <img class="js_album album_left" src="./source/ok1.jpg" alt="Ảnh cưới 2">
+        <img class="js_album album_left" src="./source/ok2.jpg" alt="Ảnh cưới 3">
+        <img class="js_album album_left" src="./source/ok3.jpg" alt="Ảnh cưới 4">
+        <img class="js_album album_left" src="./source/ok4.jpg" alt="Ảnh cưới 5">
+        <img class="js_album album_left" src="./source/ok5.jpg" alt="Ảnh cưới 6">
+        <img class="js_album album_left" src="./source/codau.jpg" alt="Ảnh cô dâu">
+        <img class="js_album album_right" src="./source/ok6.jpg" alt="Ảnh cưới 7">
+        <img class="js_album album_right" src="./source/tamdao2.jpg" alt="Ảnh Tam Đảo 2">
+        <img class="js_album album_right" src="./source/tamdao3.jpg" alt="Ảnh Tam Đảo 3"> 
+        <img class="js_album album_right" src="./source/tamdao8.jpg" alt="Ảnh Tam Đảo 8">
+        <img class="js_album album_right" src="./source/tamdao11.jpg" alt="Ảnh Tam Đảo 11">
+        <img class="js_album album_right" src="./source/tamdao14.jpg" alt="Ảnh Tam Đảo 14">
+        <img class="js_album album_right" src="./source/chure.jpg" alt="Ảnh chú rể">
     </div>
 
     <!-- Thanks -->
     <div class="thank_container">
-        
         <div class="thank_desc">
-            <img src="./source/thank.svg" alt="">
+            <img src="./source/thank.svg" alt="Cảm ơn">
             <p>Rất hân hạnh được đón tiếp!</p>
         </div>
-        <div class="footter">
+        <div class="footer">
             © 09/2026 Website by Nguyen Dinh Thanh | 
             <a href="https://thanh65905-design.github.io/wedding" class="footer-link" target="_blank" rel="noopener noreferrer">weddingKimOanhDinhThanh.vn</a>
         </div>
     </div>
-    
 
-</body>
-</html>
+    <!-- Script xử lý -->
+    <script>
+        // Căn chỉnh thanh hr theo vị trí ngày tháng
+        window.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.thiep_item');
+            const container = document.querySelector('.thiep_date_box');
+            if (items.length === 2 && container) {
+                const left = items[0].getBoundingClientRect().left;
+                const right = items[1].getBoundingClientRect().right;
+                const containerLeft = container.getBoundingClientRect().left;
+                const width = right - left;
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const items = document.querySelectorAll('.thiep_item');
-    const container = document.querySelector('.thiep_date_box');
-    if (items.length === 2 && container) {
-      const left = items[0].getBoundingClientRect().left;
-      const right = items[1].getBoundingClientRect().right;
-      const containerLeft = container.getBoundingClientRect().left;
-      const width = right - left;
+                const hr = document.querySelector('.hr-wrapper');
+                if (hr) {
+                    hr.style.width = width + 'px';
+                    hr.style.left = (left - containerLeft) + 'px';
+                    hr.style.transform = 'none';
+                }
 
-      const hr = document.querySelector('.hr-wrapper');
-      hr.style.width = width + 'px';
-      hr.style.left = (left - containerLeft) + 'px';
-      hr.style.transform = 'none';
-
-      const hr_add = document.querySelector('.hr-add');
-      hr_add.style.width = width + 'px';
-      hr_add.style.left = (left - containerLeft) + 'px';
-      hr_add.style.transform = 'none';
-      }
-    });
-
-    const btn_qr = document.querySelector('.js_qr')
-    const pop_up = document.querySelector('.popup')
-    const pop_up_ctn = document.querySelector('.popup_container')
-    const pop_up_item1 = document.querySelector('.popup_item1')
-    const pop_up_item2 = document.querySelector('.popup_item2')
-
-    function show_pop_up() {
-        pop_up.classList.add('show')
-    }
-
-    function hide_pop_up() {
-        pop_up.classList.remove('show')
-    }
-
-    btn_qr.addEventListener('click', show_pop_up)
-    pop_up.addEventListener('click', hide_pop_up)
-    pop_up_item1.addEventListener('click', function(event) {
-        event.stopPropagation();
-    })
-    pop_up_item2.addEventListener('click', function(event) {
-        event.stopPropagation();
-    })
-
-
-    // xử lý kích thước pop up
-    const items = document.querySelectorAll('.popup_item');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const ratio = entry.intersectionRatio; // 0 -> 1
-            const value = 0.8 + 0.2 * ratio; // map từ 0.5 -> 1
-            entry.target.style.opacity = value.toFixed(2);
-            entry.target.style.transform = `scale(${value.toFixed(2)})`;
+                const hr_add = document.querySelector('.hr-add');
+                if (hr_add) {
+                    hr_add.style.width = width + 'px';
+                    hr_add.style.left = (left - containerLeft) + 'px';
+                    hr_add.style.transform = 'none';
+                }
+            }
         });
-    }, {
-        root: document.querySelector('.popup_container'),
-        threshold: Array.from({ length: 101 }, (_, i) => i / 100)
-    });
 
-    items.forEach(item => observer.observe(item));
+        // Quản lý Bật/Tắt Pop-up
+        const btn_qr = document.querySelector('.js_qr');
+        const pop_up = document.querySelector('.popup');
+        const pop_up_item1 = document.querySelector('.popup_item1');
 
+        function show_pop_up() {
+            if (pop_up) pop_up.classList.add('show');
+        }
 
-    // copyyyyyyyyyyy
-    function showToast() {
-        const toast = document.getElementById('copy-toast');
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 1000);   
-    }
+        function hide_pop_up() {
+            if (pop_up) pop_up.classList.remove('show');
+        }
 
-    document.querySelectorAll('.copy').forEach(copyBtn => {
-        copyBtn.addEventListener('click', function () {
-            const text = this.dataset.copy;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast();
-            console.log(`Đã copy: ${text}`);
-            }).catch(err => {
-            console.error('Copy thất bại: ', err);
+        if (btn_qr) btn_qr.addEventListener('click', show_pop_up);
+        if (pop_up) pop_up.addEventListener('click', hide_pop_up);
+        if (pop_up_item1) {
+            pop_up_item1.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Hiệu ứng Zoom Pop-up khi cuộn/xuất hiện
+        const popupItems = document.querySelectorAll('.popup_item');
+        if (popupItems.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const ratio = entry.intersectionRatio;
+                    const value = 0.8 + 0.2 * ratio;
+                    entry.target.style.opacity = value.toFixed(2);
+                    entry.target.style.transform = `scale(${value.toFixed(2)})`;
+                });
+            }, {
+                root: document.querySelector('.popup_container'),
+                threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+            });
+
+            popupItems.forEach(item => observer.observe(item));
+        }
+
+        // Tính năng Copy Số tài khoản
+        function showToast() {
+            const toast = document.getElementById('copy-toast');
+            if (toast) {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 1000);
+            }
+        }
+
+        document.querySelectorAll('.copy').forEach(copyBtn => {
+            copyBtn.addEventListener('click', function () {
+                const text = this.dataset.copy;
+                if (navigator.clipboard && text) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast();
+                    }).catch(err => {
+                        console.error('Sao chép thất bại: ', err);
+                    });
+                }
             });
         });
-    });
-
-
-
-
-</script>
-  
+    </script>
+</body>
+</html>
