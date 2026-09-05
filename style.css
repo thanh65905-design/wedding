@@ -473,3 +473,55 @@ body {
     border-top: 1px dashed rgba(255, 255, 255, 0.4) !important;
     margin: 5px 0 !important;
 }
+/* Ép toàn bộ khung địa điểm căn lề chính xác */
+.thiep_add .location_container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+}
+
+/* Hàng ngang: Chữ bên trái - QR bên phải */
+.thiep_add .location_box {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+}
+
+/* Khối chữ căn trái */
+.thiep_add .location_info {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.thiep_add .location_info p {
+    text-align: left !important;
+    margin: 2px 0 !important;
+}
+
+/* Mã QR nằm bên phải và phóng to */
+.thiep_add .location_qr {
+    flex-shrink: 0 !important;
+    margin-left: 10px !important;
+}
+
+.thiep_add .qr_img_large {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) !important;
+    display: block !important;
+}
+
+/* Đường phân cách mảnh giữa 2 nhà */
+.thiep_add .location_line_sep {
+    border: none !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3) !important;
+    margin: 4px 0 !important;
+}
