@@ -525,3 +525,68 @@ body {
     border-top: 1px dashed rgba(255, 255, 255, 0.3) !important;
     margin: 4px 0 !important;
 }
+/* Khối chứa 2 nhà */
+.thiep_add .location_container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+}
+
+/* Chuyển từng nhà thành cột dọc (Chữ trên, QR dưới) */
+.thiep_add .location_box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 12px !important;
+}
+
+/* Phần chữ ở trên */
+.thiep_add .location_info {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.thiep_add .location_info p {
+    text-align: center !important;
+    margin: 3px 0 !important;
+}
+
+.thiep_add .add_big {
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+.thiep_add .add_small {
+    font-size: 13px !important;
+    line-height: 18px !important;
+}
+
+/* Phần mã QR ở dưới */
+.thiep_add .location_qr {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 4px 0 0 0 !important;
+}
+
+.thiep_add .qr_img_large {
+    width: 130px !important;   /* Độ rộng mã QR */
+    height: 130px !important;  /* Chiều cao mã QR */
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    display: block !important;
+}
+
+/* Đường gạch phân cách giữa Nhà Trai & Nhà Gái */
+.thiep_add .location_line_sep {
+    border: none !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.35) !important;
+    margin: 8px auto !important;
+    width: 80% !important;
+}
