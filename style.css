@@ -681,3 +681,23 @@ body {
     width: 100% !important;
     padding: 4px 0 !important;
 }
+/* Khối chứa QR và dòng chữ gợi ý */
+.thiep_add .location_qr {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: auto !important;
+}
+
+/* Định dạng dòng chữ nhắc nhở dưới mã QR */
+.thiep_add .qr_hint {
+    font-size: 11px !important;
+    color: #ffffff !important;
+    font-style: italic !important;
+    margin-top: 6px !important;
+    text-align: center !important;
+    opacity: 0.85;
+    line-height: 14px !important;
+}
