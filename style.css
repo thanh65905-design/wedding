@@ -590,3 +590,67 @@ body {
     margin: 8px auto !important;
     width: 80% !important;
 }
+/* Khối tổng thể dạng Grid chia 2 cột bằng nhau */
+.thiep_add .location_grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Cột đại diện từng nhà: Chiếm 50% độ rộng, xếp dọc chữ trên QR dưới */
+.thiep_add .location_col {
+    flex: 1 !important;
+    width: 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: center !important;
+}
+
+/* Khối văn bản ở trên */
+.thiep_add .location_info {
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+
+.thiep_add .location_info p {
+    text-align: center !important;
+    margin: 2px 0 !important;
+}
+
+.thiep_add .add_big {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.thiep_add .add_small {
+    font-size: 11.5px !important;
+    line-height: 15px !important;
+}
+
+/* Khối mã QR ở dưới căn giữa */
+.thiep_add .location_qr {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: auto !important;
+}
+
+/* Kích thước Mã QR tối ưu cho khung 2 cột */
+.thiep_add .qr_img_large {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+    display: block !important;
+}
