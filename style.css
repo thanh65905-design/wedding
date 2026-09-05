@@ -701,3 +701,32 @@ body {
     opacity: 0.85;
     line-height: 14px !important;
 }
+/* Tối ưu không gian cho khung chứa 2 cột */
+.thiep_add .location_grid {
+    gap: 8px !important;            /* Giảm bớt khoảng cách giữa 2 cột để dành không gian cho QR */
+    padding: 0 4px !important;
+}
+
+/* Tăng tối đa kích thước Mã QR */
+.thiep_add .qr_img_large {
+    width: 145px !important;         /* Tăng kích thước từ 130px lên 145px */
+    height: 145px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    
+    /* Làm sắc nét ảnh QR */
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    background-color: #ffffff !important;
+    padding: 3px !important;
+    display: block !important;
+}
+
+/* Căn chỉnh dòng chữ nhắc bên dưới */
+.thiep_add .qr_hint {
+    font-size: 10.5px !important;
+    margin-top: 5px !important;
+}
