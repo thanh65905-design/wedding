@@ -345,7 +345,31 @@ body {
     text-shadow: 1px 1px 4px black;
     z-index: 1;
 } */
+/* Khối chứa 2 nút mừng cưới */
+.btn_group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
 
+/* Chỉnh kích thước nút vừa vặn khi xếp hàng ngang */
+.btn_group .cf_btn {
+    flex: 1;
+    min-width: 160px;
+    max-width: 220px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* Tiêu đề trong Pop-up */
+.popup_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
 
 /* ani 2 ảnh.................................................................... */
 @keyframes fadeInUp {
