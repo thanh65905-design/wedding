@@ -396,3 +396,80 @@ body {
     margin-bottom: 10px;
     color: #333;
 }
+/* Đảm bảo khung địa điểm dàn đều rộng 100% */
+.thiep_add {
+    padding: 0 15px !important;
+}
+
+.location_container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+}
+
+/* Ép hàng nằm ngang: Chữ bên trái, QR bên phải */
+.location_box {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 12px !important;
+}
+
+/* Khối thông tin chữ bên trái */
+.location_info {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.location_info p {
+    text-align: left !important;
+    margin: 2px 0 !important;
+}
+
+.location_info .add_big {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-bottom: 4px !important;
+}
+
+.location_info .add_small {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+/* Khối mã QR bên phải */
+.location_qr {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.location_qr .thiep_map {
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Phóng to hình Mã QR */
+.qr_img_large {
+    width: 110px !important;   /* Có thể chỉnh lên 120px nếu muốn to hơn */
+    height: 110px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+    display: block !important;
+}
+
+/* Đường gạch ngang phân cách nhẹ giữa 2 nhà */
+.location_line_sep {
+    border: none !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.4) !important;
+    margin: 5px 0 !important;
+}
