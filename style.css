@@ -1,4 +1,7 @@
-.font_fancy{
+/* ====================================================
+   1. KHU VỰC PHÔNG CHỮ (FONTS)
+   ==================================================== */
+.font_fancy {
     font-family: "Alex Brush", cursive;
     font-weight: 500;
     font-style: normal;
@@ -15,7 +18,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.font_montserrat{
+.font_montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -30,6 +33,9 @@
     font-variation-settings: "wdth" 100;
 }
 
+/* ====================================================
+   2. NÚT ÂM THANH & CẤU TRÚC CHUNG
+   ==================================================== */
 #audioIndicator {
     position: fixed;
     top: 10px;
@@ -46,7 +52,6 @@
     display: block;
 }
 
-/* HTML & Body */
 html {
     scroll-behavior: smooth;
     background-color: #f0f8ff;
@@ -68,6 +73,9 @@ body {
     align-items: center;
 }
 
+/* ====================================================
+   3. PHẦN BÌA THIỆP & NỀN MỜ
+   ==================================================== */
 .thiep {
     position: relative;
     width: 100%;
@@ -104,7 +112,7 @@ body {
     width: 92%;
     margin: 4%;
     border-radius: 20px;
-    background: #7d7d7d45;
+    background: rgba(125, 125, 125, 0.27);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     color: white;
@@ -121,8 +129,7 @@ body {
 }
 
 .thiep_des {
-    margin: 18px;
-    margin-bottom: 24px;
+    margin: 18px 18px 24px;
     font-size: 30px;
     color: #ffffff;
     opacity: 0.9;
@@ -141,7 +148,9 @@ body {
     font-size: 20px;
 }
 
-/* Phần 2: Ngày tháng */
+/* ====================================================
+   4. PHẦN NGÀY THÁNG CỦA THIỆP
+   ==================================================== */
 .thiep_date_box {
     margin-top: 36px;
     position: relative;
@@ -212,7 +221,7 @@ body {
 }
 
 /* ====================================================
-   PHẦN 3: ĐỊA ĐIỂM TỔ CHỨC (CHỮ BÊN TRÁI - QR BÊN PHẢI)
+   5. PHẦN ĐỊA ĐIỂM TỔ CHỨC (BỐ TRÍ 2 CỘT SONG SONG)
    ==================================================== */
 .thiep_add {
     position: relative;
@@ -220,7 +229,7 @@ body {
     flex-direction: column;
     text-align: center;
     margin-top: 18px;
-    padding: 0 12px;
+    padding: 0 8px;
 }
 
 .add_fancy {
@@ -228,79 +237,95 @@ body {
     margin-bottom: 10px;
 }
 
+/* Khối chia làm 2 cột bằng nhau */
+.location_grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Cột đại diện Nhà Trai / Nhà Gái */
+.location_col {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Khối chữ phía trên */
+.location_info {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.location_info p {
+    text-align: center;
+    margin: 2px 0;
+}
+
 .add_big {
     margin-top: 4px;
-    margin-bottom: 6px;
-    font-size: 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .add_small {
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.5px;
+    font-size: 11.5px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
 }
 
-/* Khối xếp 2 địa điểm theo chiều dọc */
-.location_container {
+/* Khối mã QR phía dưới */
+.location_qr {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 10px;
-    width: 100%;
-}
-
-/* Từng dòng địa điểm: Chữ bên trái, QR bên phải */
-.location_box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.location_box > div:first-child {
-    flex: 1;
-    text-align: left;
-}
-
-.location_box p {
-    text-align: left;
-    margin: 2px 0;
-}
-
-/* Khối bên phải chứa mã QR */
-.thiep_add .thiep_all_icon {
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 12px;
-    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Nút chứa ảnh QR */
-.thiep_map {
+.qr_img_large {
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    object-fit: contain;
+    
+    /* Thuật toán làm nét pixel giúp camera điện thoại quét dễ dàng */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    padding: 3px;
     display: block;
-    width: auto;
-    height: auto;
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    margin: 0;
-}
-
-/* Phóng to mã QR chuẩn theo vùng khoanh đỏ */
-.img_map_large,
-.thiep_map > img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
 }
 
-.thiep_map:hover img {
-    transform: scale(1.05);
+.qr_img_large:hover {
+    transform: scale(1.03);
+}
+
+/* Dòng chữ nhắc nhở dưới mã QR */
+.qr_hint {
+    font-size: 10.5px;
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0.85;
+    line-height: 13px;
 }
 
 .hr-add {
@@ -313,7 +338,9 @@ body {
     border: none;
 }
 
-/* Giới thiệu */
+/* ====================================================
+   6. PHẦN GIỚI THIỆU & POP-UP
+   ==================================================== */
 .gt_container {
     margin-top: 32px;
     display: flex;
@@ -356,7 +383,6 @@ body {
     display: block;
 }
 
-/* Animation 2 ảnh giới thiệu */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -372,7 +398,6 @@ body {
     animation: fadeInUp 1.8s ease forwards;
 }
 
-/* Khối chứa 2 nút mừng cưới */
 .btn_group {
     display: flex;
     justify-content: center;
@@ -389,344 +414,9 @@ body {
     font-size: 14px;
 }
 
-/* Tiêu đề Pop-up */
 .popup_title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
-}
-/* Đảm bảo khung địa điểm dàn đều rộng 100% */
-.thiep_add {
-    padding: 0 15px !important;
-}
-
-.location_container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-}
-
-/* Ép hàng nằm ngang: Chữ bên trái, QR bên phải */
-.location_box {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    gap: 12px !important;
-}
-
-/* Khối thông tin chữ bên trái */
-.location_info {
-    flex: 1 !important;
-    text-align: left !important;
-}
-
-.location_info p {
-    text-align: left !important;
-    margin: 2px 0 !important;
-}
-
-.location_info .add_big {
-    font-size: 15px !important;
-    font-weight: bold !important;
-    margin-bottom: 4px !important;
-}
-
-.location_info .add_small {
-    font-size: 12px !important;
-    line-height: 16px !important;
-}
-
-/* Khối mã QR bên phải */
-.location_qr {
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.location_qr .thiep_map {
-    width: auto !important;
-    height: auto !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* Phóng to hình Mã QR */
-.qr_img_large {
-    width: 110px !important;   /* Có thể chỉnh lên 120px nếu muốn to hơn */
-    height: 110px !important;
-    object-fit: cover !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
-    display: block !important;
-}
-
-/* Đường gạch ngang phân cách nhẹ giữa 2 nhà */
-.location_line_sep {
-    border: none !important;
-    border-top: 1px dashed rgba(255, 255, 255, 0.4) !important;
-    margin: 5px 0 !important;
-}
-/* Ép toàn bộ khung địa điểm căn lề chính xác */
-.thiep_add .location_container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-}
-
-/* Hàng ngang: Chữ bên trái - QR bên phải */
-.thiep_add .location_box {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    padding: 0 10px !important;
-    box-sizing: border-box !important;
-}
-
-/* Khối chữ căn trái */
-.thiep_add .location_info {
-    flex: 1 !important;
-    text-align: left !important;
-}
-
-.thiep_add .location_info p {
-    text-align: left !important;
-    margin: 2px 0 !important;
-}
-
-/* Mã QR nằm bên phải và phóng to */
-.thiep_add .location_qr {
-    flex-shrink: 0 !important;
-    margin-left: 10px !important;
-}
-
-.thiep_add .qr_img_large {
-    width: 110px !important;
-    height: 110px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) !important;
-    display: block !important;
-}
-
-/* Đường phân cách mảnh giữa 2 nhà */
-.thiep_add .location_line_sep {
-    border: none !important;
-    border-top: 1px dashed rgba(255, 255, 255, 0.3) !important;
-    margin: 4px 0 !important;
-}
-/* Khối chứa 2 nhà */
-.thiep_add .location_container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-}
-
-/* Chuyển từng nhà thành cột dọc (Chữ trên, QR dưới) */
-.thiep_add .location_box {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    gap: 12px !important;
-}
-
-/* Phần chữ ở trên */
-.thiep_add .location_info {
-    text-align: center !important;
-    width: 100% !important;
-}
-
-.thiep_add .location_info p {
-    text-align: center !important;
-    margin: 3px 0 !important;
-}
-
-.thiep_add .add_big {
-    font-size: 16px !important;
-    font-weight: bold !important;
-}
-
-.thiep_add .add_small {
-    font-size: 13px !important;
-    line-height: 18px !important;
-}
-
-/* Phần mã QR ở dưới */
-.thiep_add .location_qr {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 4px 0 0 0 !important;
-}
-
-.thiep_add .qr_img_large {
-    width: 130px !important;   /* Độ rộng mã QR */
-    height: 130px !important;  /* Chiều cao mã QR */
-    object-fit: cover !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
-    display: block !important;
-}
-
-/* Đường gạch phân cách giữa Nhà Trai & Nhà Gái */
-.thiep_add .location_line_sep {
-    border: none !important;
-    border-top: 1px dashed rgba(255, 255, 255, 0.35) !important;
-    margin: 8px auto !important;
-    width: 80% !important;
-}
-/* Khối tổng thể dạng Grid chia 2 cột bằng nhau */
-.thiep_add .location_grid {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Cột đại diện từng nhà: Chiếm 50% độ rộng, xếp dọc chữ trên QR dưới */
-.thiep_add .location_col {
-    flex: 1 !important;
-    width: 50% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    text-align: center !important;
-}
-
-/* Khối văn bản ở trên */
-.thiep_add .location_info {
-    text-align: center !important;
-    width: 100% !important;
-    margin-bottom: 10px !important;
-}
-
-.thiep_add .location_info p {
-    text-align: center !important;
-    margin: 2px 0 !important;
-}
-
-.thiep_add .add_big {
-    font-size: 14px !important;
-    font-weight: bold !important;
-}
-
-.thiep_add .add_small {
-    font-size: 11.5px !important;
-    line-height: 15px !important;
-}
-
-/* Khối mã QR ở dưới căn giữa */
-.thiep_add .location_qr {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin-top: auto !important;
-}
-
-/* Kích thước Mã QR tối ưu cho khung 2 cột */
-.thiep_add .qr_img_large {
-    width: 100px !important;
-    height: 100px !important;
-    max-width: 100% !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
-    display: block !important;
-}
-/* Tăng kích thước và làm rõ nét mã QR cho bố trí 2 cột */
-.thiep_add .qr_img_large {
-    width: 130px !important;            /* Tăng kích thước QR to hơn */
-    height: 130px !important;
-    max-width: 100% !important;
-    object-fit: contain !important;      /* Giữ nguyên tỉ lệ ảnh không bị móp */
-    
-    /* Thuật toán làm nét pixel giúp QR rõ hơn, dễ quét hơn */
-    image-rendering: -webkit-optimize-contrast !important;
-    image-rendering: crisp-edges !important;
-    image-rendering: pixelated !important;
-    
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-    background-color: #ffffff !important; /* Lót nền trắng giúp mắt đọc QR quét nhạy hơn */
-    padding: 3px !important;             /* Tạo viền trắng nhỏ xung quanh mã QR */
-    display: block !important;
-}
-
-/* Đảm bảo khung chứa QR có không gian rộng đủ chứa ảnh to */
-.thiep_add .location_qr {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 4px 0 !important;
-}
-/* Khối chứa QR và dòng chữ gợi ý */
-.thiep_add .location_qr {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-top: auto !important;
-}
-
-/* Định dạng dòng chữ nhắc nhở dưới mã QR */
-.thiep_add .qr_hint {
-    font-size: 11px !important;
-    color: #ffffff !important;
-    font-style: italic !important;
-    margin-top: 6px !important;
-    text-align: center !important;
-    opacity: 0.85;
-    line-height: 14px !important;
-}
-/* Tối ưu không gian cho khung chứa 2 cột */
-.thiep_add .location_grid {
-    gap: 8px !important;            /* Giảm bớt khoảng cách giữa 2 cột để dành không gian cho QR */
-    padding: 0 4px !important;
-}
-
-/* Tăng tối đa kích thước Mã QR */
-.thiep_add .qr_img_large {
-    width: 145px !important;         /* Tăng kích thước từ 130px lên 145px */
-    height: 145px !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    
-    /* Làm sắc nét ảnh QR */
-    image-rendering: -webkit-optimize-contrast !important;
-    image-rendering: crisp-edges !important;
-    
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-    background-color: #ffffff !important;
-    padding: 3px !important;
-    display: block !important;
-}
-
-/* Căn chỉnh dòng chữ nhắc bên dưới */
-.thiep_add .qr_hint {
-    font-size: 10.5px !important;
-    margin-top: 5px !important;
 }
